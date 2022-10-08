@@ -18,18 +18,6 @@ test('Возвращает false для неправильного типа да
   expect(convertBytesToHuman([1, 2, 3])).toBe(false)  
   expect(convertBytesToHuman({})).toBe(false)
   expect(convertBytesToHuman(BigInt(1234567890123456789012345678901234567890))).toBe(false) 
-  let data = [1, 2, 3]
-  let unique_data = data.map( (value) => {return value ** 2} )
-  expect(convertBytesToHuman(unique_data)).toBe(false)
-  class User {
-
-    constructor(name) {
-      this.name = name;
-    }
-
-  } 
-  let user = new User('Alex')
-  expect(convertBytesToHuman(user)).toBe(false)
 });
 
 test('Возвращает корректное значение для чисел', () => {
