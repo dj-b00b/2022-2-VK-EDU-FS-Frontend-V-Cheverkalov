@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <link rel="stylesheet" href="./index.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="http://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Send a Message</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="arrow_back">
+      <a href="http://localhost:8080/back/" class="arrow_back">
+        <span class="material-icons">arrow_back</span>
+      </a>
+    </div>
+
+    <div class="user_info">
+      <div class="user_avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/706/706831.png" height="80px">
+        <div class="user-text">
+          <h1 class="name">Дженнифер</h1>
+          <p class="latest_activity">была 2 часа назад</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="more_buttons">
+      <div class='search'>
+        <a href="http://localhost:8080/search/" class="search">
+          <span class="material-icons">search</span>
+        </a>
+      </div>
+
+      <div class='menu'>
+        <a href="http://localhost:8080/menu/" class="menu">
+          <span class="material-icons">more_vert</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat">
+    <div class="message message-left">
+      <p class="message_text">Привет, чем занимаешься сегодня вечером?</p>
+      <div class="message_metadata">
+        <div class="sending_time">13:55</div>
+        <div class="status">
+          <span class='material-icons'>done_all</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="message message-right">
+      <p class="message_text">Привет, сегодня я смотрю футбол!</p>
+      <div class="message_metadata">
+        <div class="sending_time">14:31</div>
+        <div class="status">
+          <span class='material-icons'>done_all</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="message_input">
+    <form class="form" action="/">
+      <input class="form-input" name="message-text" placeholder="Сообщение" type="text">
+      <a href="http://localhost:8080/attachment/" class="attachment">
+        <span class="material-icons">attachment</span>
+      </a>
+    </form>
+  </div>
+  <script src="./index.js">
+  </script>
+</body>
+
+</html>
