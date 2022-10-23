@@ -1,4 +1,4 @@
-import './index.css';
+//import './index.css';
 
 const form = document.querySelector('form');
 const input = document.querySelector('.form-input');
