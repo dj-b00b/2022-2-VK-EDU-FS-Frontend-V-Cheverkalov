@@ -13,3 +13,6 @@ function goToChat() {
     document.location.href = 'src/chat_page/index.html';
 }
 
+
+
+
