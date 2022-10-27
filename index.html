@@ -1,152 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head lang="en">
-  <link rel="stylesheet" href="./index.css" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="http://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
-  <meta charset="UTF-8">
-  <title>Send a Message</title>
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9, user-scalable=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="http://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet" />
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/floating_button.css">
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/chats.css">
+  <title>Chats</title>
 <link href="style.css" rel="stylesheet"></head>
 
 <body>
   <div class="header">
-    <div class="arrow_back">
-      <a href="http://localhost:8080/back/" class="arrow_back">
-        <span class="material-icons">arrow_back</span>
-      </a>
-    </div>
-
-    <div class="user_info">
-      <div class="user_avatar">
-        <img src="https://cdn-icons-png.flaticon.com/512/706/706831.png" height="80px">
-        <div class="user-text">
-          <h1 class="name">Дженнифер</h1>
-          <p class="latest_activity">была 2 часа назад</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="more_buttons">
-      <div class="search">
-        <a href="http://localhost:8080/search/" class="search">
-          <span class="material-icons">search</span>
-        </a>
-      </div>
-
+    <div class="left_field">
       <div class="menu">
-        <a href="http://localhost:8080/menu/" class="menu">
-          <span class="material-icons">more_vert</span>
+        <a href="http://localhost:8080/back/" class="menu">
+          <span class="material-icons">menu</span>
         </a>
       </div>
-    </div>
-  </div>
-
-  <div class="chat">
-    <div class="message message-left">
-      <p class="message_text">Привет, чем занимаешься сегодня вечером?</p>
-      <div class="message_metadata">
-        <div class="sending_time">13:55</div>
-        <div class="status">
-          <span class="material-icons">done_all</span>
-        </div>
-      </div>
+      <h1 class="title">Messenger</h1>
     </div>
 
-    <div class="message message-right">
-      <p class="message_text">Привет, сегодня я смотрю футбол!</p>
-      <div class="message_metadata">
-        <div class="sending_time">14:31</div>
-        <div class="status">
-          <span class="material-icons">done_all</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="message_input">
-    <form class="form" action="/">
-      <input class="form-input" name="message-text" placeholder="Сообщение" type="text">
-      <a href="http://localhost:8080/attachment/" class="attachment">
-        <span class="material-icons">attachment</span>
+    <div class="search">
+      <a href="http://localhost:8080/search/" class="search">
+        <span class="material-icons">search</span>
       </a>
-    </form>
+    </div>
   </div>
-  <script>
-    const form = document.querySelector('form');
-    const input = document.querySelector('.form-input');
-    const message = document.querySelector('.message');
-    const chat = document.querySelector('.chat')
-    
-    getMessagesFromLocalStorage();
-    form.addEventListener('submit', this.handleSubmit.bind(this));
-    form.addEventListener('keypress', this.handleKeyPress.bind(this));
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      let message = {
-        'time': new Date().toLocaleTimeString().slice(0, -3),
-        'sender': 'not defined',
-        'content': input.value
-      };
-      addMessagesMirror(message);
-      saveMessagesInLocalStorage(message);
-      event.target.reset();
-    }
+  <div class="chats">
+    <div class="block_chat">
+      <div class="user_info">
+        <div class="user_avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" height="80px" />
+        </div>
+        <div class="user_n_message">
+          <p class="username">Рандом Рандомов</p>
+          <p class="message">Я узнаю насчет твого вопроса, перезвони мне завтра вечером.</p>
+        </div>
+      </div>
+      <div class="message_metadata">
+        <p class="time">15:47</p>
+        <div class="status">
+          <span class="material-icons">done_all</span>
+        </div>
+      </div>
 
-    function addMessagesMirror(message) {
-      createMessage(message, 'message message-right');
-      createMessage(message, 'message message-left');
-    }
+    </div>
 
-    function createMessage(message, sender) {
-      let newMessage = document.createElement('div');
-      newMessage.className = sender;
-      chat.append(newMessage);
+    <div class="block_chat">
+      <div class="user_info">
+        <div class="user_avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" height="80px" />
+        </div>
+        <div class="user_n_message">
+          <p class="username">Язык Джаваскриптов</p>
+          <p class="message">Погнали в бар вечером!</p>
+        </div>
+      </div>
+      <div class="message_metadata">
+        <p class="time">16:47</p>
+        <div class="status">
+          <p class="unread_messages">24</p>
+        </div>
+      </div>
+    </div>   
 
-      let newMessageContent = document.createElement('p');
-      newMessageContent.className = 'message_text';
-      newMessageContent.innerText = message.content;
-      newMessage.append(newMessageContent);
+      <button class="floating_button">
+        <span class="material-icons">create</span>
+      </button>
+    </div>
 
-      let newMessageMetadata = document.createElement('div');
-      newMessageMetadata.className = 'message_metadata';
-      newMessage.append(newMessageMetadata);
+    <script> 
+    </script>
 
-      let newMessageTime = document.createElement('div');
-      newMessageTime.className = 'sending_time';
-      newMessageTime.innerText = message.time;
-      newMessageMetadata.append(newMessageTime);
-      
-      let newMessageStatus = document.createElement('div');
-      newMessageStatus.className = 'status';
-      newMessageMetadata.append(newMessageStatus);
-      newMessageStatus.innerHTML = "<span class='material-icons'>done_all</span>";
-    }
-
-    function saveMessagesInLocalStorage(message) {
-      let messages = localStorage.getItem('messages');
-      if (messages == '' || messages == null) {
-        localStorage.setItem('messages', JSON.stringify({
-          'all': []
-        }));
-      }
-      messages = localStorage.getItem('messages');
-      messages = JSON.parse(messages);
-      messages.all.push(message);
-      localStorage.setItem('messages', JSON.stringify(messages));
-    }
-
-    function getMessagesFromLocalStorage() {
-      let messages = localStorage.getItem('messages');
-      if (messages != '' && messages !== null) {
-        messages = JSON.parse(messages);
-        for (let message of messages.all) {
-          addMessagesMirror(message);
-        }
-      }
-    }
-  </script>
 <script type="text/javascript" src="bundle.js"></script></body>
 
 </html>
