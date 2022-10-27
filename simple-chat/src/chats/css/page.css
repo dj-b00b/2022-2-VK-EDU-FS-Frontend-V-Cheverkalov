@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: -5px;
+    background-color: #fff;
+    font-size: 15px;
+    font-family: 'Bahnschrift', sans-serif;
+}
