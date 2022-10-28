@@ -32,9 +32,10 @@
 }
 
 .search {
-    padding-right: 20px;
+    padding-right: 15px;
     color: white;
     background-color: #8e24aa;  
+    margin-left: 20px;
 }
 
 .search span {
