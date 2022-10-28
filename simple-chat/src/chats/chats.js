@@ -10,7 +10,7 @@ chats.forEach(function (block) {
 })
 
 function goToChat() {
-    document.location.href = 'src/chat_page/index.html';
+    document.location.href = 'chat_page.html';
 }
 
 
