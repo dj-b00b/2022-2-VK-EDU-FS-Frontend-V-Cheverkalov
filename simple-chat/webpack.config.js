@@ -12,11 +12,12 @@ const BUILD_PATH = path.resolve(__dirname, 'build');
 module.exports = {
     context: SRC_PATH,
     entry: {
-        index: './chats/index.js',
+        chats:'./chats/chats.js',
+        chat:'./chat_page/chat_page.js'
     },
     output: {
         path: BUILD_PATH,
-        filename: 'bundle.js'
+        filename: '[name]-bundle.js'
     },
     module: {
         strictExportPresence: true,
@@ -43,7 +44,7 @@ module.exports = {
                 ],
             },
             {
-                test: [/page\.css$/, /form\.css$/, /header\.css$/, /chats\.css$/, /floating_button\.css$/],
+                test: /\.css$/,
                 include: SRC_PATH,
                 use: [
                     {
@@ -58,12 +59,18 @@ module.exports = {
     },
     plugins: [
         new MiniCSSExtractPlugin({
-            filename: 'style.css',
+            filename: '[name]-style.css',
         }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            template: './chats/index.html'
-        })
+            template: './chats/chats.html',
+            chunks:['chats'],
         
+        }),
+        new HTMLWebpackPlugin({
+            filename:'chat_page.html',
+            template:'./chat_page/chat_page.html',
+            chunks:['chat'],
+        })
     ]
 };
