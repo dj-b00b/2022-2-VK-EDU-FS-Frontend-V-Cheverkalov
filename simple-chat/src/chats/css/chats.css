@@ -28,8 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 45px;
-    margin: 0 -5px;
+    margin-right: 35px;
     width: 69px;
     height: 46.5px;
 }
@@ -76,4 +75,5 @@
     transition-duration: 0.5s;
     background-color: gainsboro;
   }
+
 
