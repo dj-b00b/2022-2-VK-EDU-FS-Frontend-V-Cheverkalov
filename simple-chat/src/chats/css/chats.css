@@ -16,24 +16,26 @@
 
 .user_avatar {
     margin: 0 20px;
+
 }
 
 .username {
     font-weight: bold;
+    margin-bottom: -8px;
 }
 
 .message_metadata {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 45px;
-    margin: 0 -5px;
+    margin-right: 35px;
     width: 69px;
     height: 46.5px;
 }
 
 .user_info {
     display: flex;
+    align-items: center;
     margin: 0 -20px;
     padding-left: 20px;
     
@@ -58,3 +60,14 @@
     border: 0;
     margin: 0 -5px; 
 }
+
+.message {
+    width: 280px;
+
+}
+
+.user_n_message {
+    display: flex;
+    flex-direction: column;
+}
+      
