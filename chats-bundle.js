@@ -81,10 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./chats/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./chats/chats.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./chats/chats.js":
+/*!************************!*\
+  !*** ./chats/chats.js ***!
+  \************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/header.css */ \"./chats/css/header.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_header_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_floating_button_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/floating_button.css */ \"./chats/css/floating_button.css\");\n/* harmony import */ var _css_floating_button_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_floating_button_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_page_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/page.css */ \"./chats/css/page.css\");\n/* harmony import */ var _css_page_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_page_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _css_chats_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/chats.css */ \"./chats/css/chats.css\");\n/* harmony import */ var _css_chats_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_chats_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nvar chats = document.querySelectorAll(\".block_chat\");\nchats.forEach(function (block) {\n  block.addEventListener(\"click\", goToChat);\n});\nfunction goToChat() {\n  document.location.href = 'chat_page.html';\n}\n\n//# sourceURL=webpack:///./chats/chats.js?");
+
+/***/ }),
 
 /***/ "./chats/css/chats.css":
 /*!*****************************!*\
@@ -127,18 +139,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./chat
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./chats/css/page.css?");
-
-/***/ }),
-
-/***/ "./chats/index.js":
-/*!************************!*\
-  !*** ./chats/index.js ***!
-  \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/header.css */ \"./chats/css/header.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_header_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_floating_button_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/floating_button.css */ \"./chats/css/floating_button.css\");\n/* harmony import */ var _css_floating_button_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_floating_button_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_page_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/page.css */ \"./chats/css/page.css\");\n/* harmony import */ var _css_page_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_page_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _css_chats_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/chats.css */ \"./chats/css/chats.css\");\n/* harmony import */ var _css_chats_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_chats_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nvar chats = document.querySelectorAll(\".block_chat\");\nchats.forEach(function (block) {\n  block.addEventListener(\"click\", goToChat);\n});\nfunction goToChat() {\n  document.location.href = 'src/chat_page/index.html';\n}\n\n//# sourceURL=webpack:///./chats/index.js?");
 
 /***/ })
 
