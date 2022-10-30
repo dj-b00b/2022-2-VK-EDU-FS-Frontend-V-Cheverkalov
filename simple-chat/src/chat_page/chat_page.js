@@ -9,8 +9,7 @@ const message = document.querySelector('.message');
 const chat = document.querySelector('.chat')
 
 getMessagesFromLocalStorage();
-form.addEventListener('submit', this.handleSubmit.bind(this));
-form.addEventListener('keypress', this.handleKeyPress.bind(this));
+form.addEventListener('submit', handleSubmit); 
 
 function handleSubmit(event) {
   event.preventDefault();
