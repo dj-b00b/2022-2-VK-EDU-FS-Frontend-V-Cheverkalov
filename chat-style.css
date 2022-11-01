@@ -29,7 +29,6 @@ input {
     border: 0;
 }
 
-
 html {
     box-sizing: border-box;
 
@@ -86,6 +85,25 @@ body {
     animation-fill-mode: forwards;
 
 }
+
+@keyframes smooth_appearance {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    70% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    75% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
 .message-left {
     background-color: #ffffff;
@@ -191,4 +209,27 @@ body {
     background-color: #8e24aa;  
 }
 
+.menu:active {
+    color:red;
+    transition: 1s;
+    animation: blinker 1s linear;
+}
+
+.search span:active {
+    color:red;
+    transition: 1s;
+    animation: blinker 1s linear;
+}
+
+.arrow_back span:active {
+    color:red;
+    transition: 1s;
+    animation: blinker 1s linear;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
 
