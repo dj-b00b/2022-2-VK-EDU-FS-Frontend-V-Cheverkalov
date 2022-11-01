@@ -1,0 +1,73 @@
+.chats {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 110px);
+}
+
+.block_chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1.5px solid gainsboro;
+
+}
+
+.user_avatar {
+    margin: 0 20px;
+
+}
+
+.username {
+    font-weight: bold;
+    margin-bottom: -8px;
+}
+
+.message_metadata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 35px;
+    width: 69px;
+    height: 46.5px;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    margin: 0 -20px;
+    padding-left: 20px;
+    
+}
+
+.time {
+    color: rgb(127, 120, 128);
+    margin: 0 -5px
+}
+
+.status span {
+    color: #8E24AA;
+}
+
+.unread_messages {
+    background-color: #8E24AA;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    border-radius: 20%;
+    border: 0;
+    margin: 0 -5px; 
+}
+
+.message {
+    width: 280px;
+
+}
+
+.user_n_message {
+    display: flex;
+    flex-direction: column;
+}
+      
