@@ -8,8 +8,6 @@
     right: 30px;
     border-radius: 70%;
     border: 0;
-    
-
 }
 
 .floating_button span {
@@ -36,5 +34,3 @@
     transition-duration: 1s;
     color: red;
   }
-
-

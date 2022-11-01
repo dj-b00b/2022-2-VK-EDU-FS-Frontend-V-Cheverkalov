@@ -76,7 +76,3 @@ function getMessagesFromLocalStorage() {
   }
 }
 
-
-
-
-
