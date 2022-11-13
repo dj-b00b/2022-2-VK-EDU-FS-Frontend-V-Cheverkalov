@@ -71,3 +71,8 @@
     flex-direction: column;
 }
       
+.block_chat:hover {
+    transition-duration: 0.5s;
+    background-color: gainsboro;
+  }
+
